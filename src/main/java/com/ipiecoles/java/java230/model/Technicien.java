@@ -3,11 +3,15 @@ package com.ipiecoles.java.java230.model;
 import com.ipiecoles.java.java230.exceptions.TechnicienException;
 import org.joda.time.LocalDate;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name="employe")
 public class Technicien extends Employe implements Comparable<Technicien> {
 
 
+	@Transient
 	private Manager manager;
 
 	private Integer grade;

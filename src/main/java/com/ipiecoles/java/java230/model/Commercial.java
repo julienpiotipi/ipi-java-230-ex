@@ -2,7 +2,15 @@ package com.ipiecoles.java.java230.model;
 
 import org.joda.time.LocalDate;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="commercial")
 public class Commercial extends Employe {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long Id;
 
 	private Double caAnnuel = 0d;
 
